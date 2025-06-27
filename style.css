@@ -38,7 +38,7 @@ h1 {
 }
 
 .card {
-    margin: 2rem;
+    margin: 1.5rem;
     border-radius: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -70,6 +70,14 @@ picture img {
 .perfume {
     letter-spacing: .5rem;
     text-transform: uppercase;
+}
+
+.title, .price, button {
+    font-size: clamp(2.3rem, 1.8rem + 1vw, 2.5rem);
+}
+
+.perfume, .discrip, .sale {
+    font-size: clamp(.8rem, .4rem + 1vw, 1rem);
 }
 
 .discrip {
@@ -116,4 +124,28 @@ button img {
 
 button:hover {
     background-color: var(--Green-700);
+}
+
+@media (max-width: 40rem) {
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr;
+        margin: 1rem;
+        max-width: 25rem;
+    }
+
+    picture {
+        position: relative;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    picture img {
+        position: absolute;
+        top: -7.3rem;
+        height: auto;
+    }
+
+    .content-wrapper {
+        gap: 1rem;
+    }
 }
